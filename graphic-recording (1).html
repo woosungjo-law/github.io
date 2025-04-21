@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이사 임기 관리 그래픽 레코딩</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+        
+        @font-face {
+            font-family: 'CookieRun';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        
+        .graphic-container {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .title {
+            font-family: 'CookieRun', sans-serif;
+            font-size: 2.5em;
+            color: #3d5afe;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 1.2em;
+            color: #757575;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section-title {
+            font-family: 'CookieRun', sans-serif;
+            font-size: 1.5em;
+            color: #ff6d00;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 5px solid #ff6d00;
+        }
+        
+        .content-box {
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .law-point {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: bold;
+            color: #d81b60;
+        }
+        
+        .tip-box {
+            background-color: #e3f2fd;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            border-left: 5px solid #2196f3;
+        }
+        
+        .tip-title {
+            font-family: 'CookieRun', sans-serif;
+            color: #2196f3;
+            margin-bottom: 10px;
+        }
+        
+        .emoji {
+            font-size: 1.5em;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        
+        .steps-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .step-box {
+            width: 28%;
+            background-color: #fff3e0;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .step-number {
+            font-family: 'CookieRun', sans-serif;
+            font-size: 1.3em;
+            color: #ff9800;
+            margin-bottom: 10px;
+        }
+        
+        .step-text {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        
+        .note {
+            font-family: 'CookieRun', sans-serif;
+            background-color: #ffebee;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            transform: rotate(15deg);
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+            font-size: 0.9em;
+            color: #c62828;
+            z-index: 10;
+        }
+        
+        .quiz-box {
+            background-color: #e8f5e9;
+            border-radius: 10px;
+            padding: 20px;
+            border: 2px dashed #4caf50;
+            margin-top: 30px;
+        }
+        
+        .quiz-title {
+            font-family: 'CookieRun', sans-serif;
+            color: #2e7d32;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .quiz-question {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .quiz-answer {
+            font-family: 'CookieRun', sans-serif;
+            color: #d32f2f;
+            margin-top: 15px;
+            text-align: center;
+        }
+        
+        .icon {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: #673ab7;
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        /* 장식용 요소 */
+        .decoration {
+            position: absolute;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .dec1 {
+            top: 50px;
+            left: 30px;
+            font-size: 8em;
+            transform: rotate(-20deg);
+        }
+        
+        .dec2 {
+            bottom: 100px;
+            right: 40px;
+            font-size: 6em;
+            transform: rotate(15deg);
+        }
+        
+        .highlight-box {
+            background-color: #ffeeff;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 5px solid #aa00ff;
+        }
+        
+        .highlight-title {
+            font-family: 'CookieRun', sans-serif;
+            color: #aa00ff;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="graphic-container">
+        <!-- 장식 요소 -->
+        <div class="decoration dec1">📋</div>
+        <div class="decoration dec2">⚖️</div>
+        
+        <div class="header">
+            <div class="title">회사 이사 임기 관리 가이드</div>
+            <div class="subtitle">회사 안정성을 위한 법적 지식</div>
+        </div>
+        
+        <div class="section">
+            <div class="note">회사 위기 상황! 어떻게 해야 할까요?</div>
+            <div class="section-title"><span class="emoji">😱</span> 이사 임기와 회사 위기</div>
+            <div class="content-box">
+                <p>회사가 M&A 위협에 처했을 때, 이사들의 임기가 달라 경영이 불안정해질 수 있습니다. 임기 만료된 이사 자리를 외부 세력이 노릴 수 있어 회사 경영권이 위험해질 수 있습니다.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title"><span class="emoji">✨</span> 이사 임기 관련 법률 지식</div>
+            <div class="highlight-box">
+                <div class="highlight-title">알아두세요! 이사 임기 규정</div>
+                <ul>
+                    <li><span class="law-point">상법 제383조 제2항</span> - 이사 임기는 <span style="font-family: 'CookieRun'; color: #3d5afe;">3년을 넘지 못함</span> (강행규정)</li>
+                    <li><span class="law-point">상법 제383조 제3항</span> - <span style="font-family: 'CookieRun'; color: #3d5afe;">정관으로 정기주주총회 종료까지 임기 연장 가능</span></li>
+                    <li><span class="law-point">상법 제386조 제1항</span> - 이사 부재 시 <span style="font-family: 'CookieRun'; color: #3d5afe;">임기 만료된 이사도 후임 취임까지 직무 수행</span></li>
+                    <li><span class="law-point">상법 제386조 제2항</span> - 필요시 <span style="font-family: 'CookieRun'; color: #3d5afe;">법원이 임시이사 선임 가능</span></li>
+                    <li><span class="law-point">상법 제385조 제1항</span> - 이사는 주주총회 특별결의로 해임 가능, 부당 해임 시 손해배상 청구 가능</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title"><span class="emoji">✅</span> 이사 임기 관리 방법</div>
+            <div class="steps-container">
+                <div class="step-box">
+                    <div class="step-number">1</div>
+                    <div class="step-text"><span style="font-family: 'CookieRun';">정관 변경</span><br>임기 만료를 주주총회와 맞추기</div>
+                </div>
+                <div class="step-box">
+                    <div class="step-number">2</div>
+                    <div class="step-text"><span style="font-family: 'CookieRun';">차등 임기제</span><br>이사별 임기를 다르게 하여 동시 교체 방지</div>
+                </div>
+                <div class="step-box">
+                    <div class="step-number">3</div>
+                    <div class="step-text"><span style="font-family: 'CookieRun';">임시이사 활용</span><br>공백 발생 시 법원에 임시이사 요청</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="tip-box">
+                <div class="tip-title"><span class="emoji">😎</span> 법조인 꿀팁!</div>
+                <p>이사 임기 관리는 경영 안정성과 M&A 방어에 직결됩니다. <span style="font-family: 'CookieRun'; font-weight: bold;">차등 임기제</span>는 이사회 안정에 매우 중요합니다. 주주라면 회사 <span style="font-family: 'CookieRun'; font-weight: bold;">정관</span>을 확인하여 임기 규정을 파악하세요!</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="content-box" style="background-color: #ede7f6; text-align: center;">
+                <h3 style="font-family: 'CookieRun'; color: #673ab7;">오늘의 법률 지혜 📌</h3>
+                <p style="font-size: 1.2em; font-weight: bold;">이사 임기는 기본 3년, 정관으로 주총까지 연장 가능!<br>후임 전까지 직무 수행!</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="quiz-box">
+                <div class="quiz-title"><span class="emoji">🔔</span> 재미있는 법률 퀴즈</div>
+                <div class="quiz-question">Q. 회사 정관으로 이사 임기를 5년으로 정할 수 있을까요?</div>
+                <div class="quiz-answer">정답: ❌ 상법상 3년 초과 불가!</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
