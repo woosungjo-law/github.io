@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>의식혁명: 의식수준에 따른 현실 경험</title>
+    <style>
+        body {
+            font-family: 'Nanum Gothic', Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #3a3a3a;
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #6a89cc;
+            padding-bottom: 10px;
+        }
+        .headline {
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #2f3542;
+        }
+        .scale-visual {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .level-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .level-section {
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .lower-levels {
+            background-color: #ffeceb;
+            border-left: 5px solid #e84118;
+        }
+        .higher-levels {
+            background-color: #ebf5ff;
+            border-left: 5px solid #4a69bd;
+        }
+        .divider {
+            text-align: center;
+            margin: 20px 0;
+            position: relative;
+        }
+        .divider:before {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 100%;
+            background: #ddd;
+            position: absolute;
+            top: 50%;
+            z-index: 1;
+        }
+        .divider span {
+            background: #ffbe76;
+            padding: 5px 15px;
+            position: relative;
+            z-index: 2;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        .level-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+        }
+        .level-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .level-content {
+            flex-grow: 1;
+        }
+        .level-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .level-desc {
+            font-size: 14px;
+            color: #555;
+        }
+        .level-quote {
+            font-style: italic;
+            color: #777;
+            margin-top: 5px;
+            font-size: 13px;
+        }
+        .notes {
+            background-color: #f1f2f6;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            margin: 20px 0;
+        }
+        .bottom-message {
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #4a69bd;
+            padding: 10px;
+            border: 1px solid #4a69bd;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>의식혁명: 같은 상황, 다른 세계</h1>
+        
+        <div class="headline">
+            "당신의 의식수준이 현실을 결정한다" - 데이비드 호킨스 박사의 의식수준 스케일 (0-1,000)
+        </div>
+        
+        <div class="scale-visual">
+            <svg width="500" height="80">
+                <rect x="50" y="40" width="400" height="10" rx="5" fill="#dfe4ea"></rect>
+                <circle cx="250" cy="45" r="20" fill="#ff6b6b" stroke="#2f3542" stroke-width="2"></circle>
+                <text x="250" y="50" text-anchor="middle" font-weight="bold" fill="#fff">200</text>
+                <text x="50" y="70" text-anchor="start" font-size="12" fill="#2f3542">0</text>
+                <text x="450" y="70" text-anchor="end" font-size="12" fill="#2f3542">1,000</text>
+                <text x="150" y="25" text-anchor="middle" font-size="12" fill="#e84118">'힘'의 에너지 (삶의 에너지 고갈)</text>
+                <text x="350" y="25" text-anchor="middle" font-size="12" fill="#4a69bd">'권능'의 에너지 (성장과 지지)</text>
+            </svg>
+        </div>
+        
+        <div class="level-container">
+            <div class="level-section lower-levels">
+                <h2>낮은 의식수준 (200 미만)</h2>
+                
+                <div class="level-card">
+                    <div class="level-number" style="background-color: #ff6b6b;">20</div>
+                    <div class="level-content">
+                        <div class="level-title">수치심</div>
+                        <div class="level-desc">자기 비난과 무가치함. 자신의 존재 가치를 상황과 동일시</div>
+                        <div class="level-quote">"역시 나는 부족한 사람이야..."</div>
+                    </div>
+                </div>
+                
+                <div class="level-card">
+                    <div class="level-number" style="background-color: #ff7f50;">30</div>
+                    <div class="level-content">
+                        <div class="level-title">죄책감</div>
+                        <div class="level-desc">깊은 절망과 무기력함. 세상으로부터 숨고 싶은 마음</div>
+                        <div class="level-quote">"다음에도 어차피 실패할 거야..."</div>
+                    </div>
+                </div>
+                
+                <div class="level-card">
+                    <div class="level-number" style="background-color: #ffa502;">150</div>
+                    <div class="level-content">
+                        <div class="level-title">분노</div>
+                        <div class="level-desc">외부의 불공평함과 특정 인물에 대한 적개심</div>
+                        <div class="level-quote">"어떻게 나한테 이럴 수가!"</div>
+                    </div>
+                </div>
+                
+                <div class="level-card">
+                    <div class="level-number" style="background-color: #eccc68;">175</div>
+                    <div class="level-content">
+                        <div class="level-title">자존심</div>
+                        <div class="level-desc">오만함과 방어심. 실패의 원인을 외부 요인으로만 돌림</div>
+                        <div class="level-quote">"나는 잘못 없어, 세상이 나를 몰라주는 거야"</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="divider">
+                <span>분수령: 용기(200)</span>
+            </div>
+            
+            <div class="level-section higher-levels">
+                <h2>높은 의식수준 (200 이상)</h2>
+                
+                <div class="level-card">
+                    <div class="level-number" style="background-color: #7bed9f;">200</div>
+                    <div class="level-content">
+                        <div class="level-title">용기</div>
+                        <div class="level-desc">현실 직면과 문제 해결을 위한 구체적 행동 시작</div>
+                        <div class="level-quote">"좌절스럽지만, 여기서 배울 점은 없을까?"</div>
+                    </div>
+                </div>
+                
+                <div class="level-card">
+                    <div class="level-number" style="background-color: #70a1ff;">350</div>
+                    <div class="level-content">
+                        <div class="level-title">수용</div>
+                        <div class="level-desc">상황을 있는 그대로 받아들임. 불필요한 저항을 멈춤</div>
+                        <div class="level-quote">"이런 일도 일어날 수 있구나. 다음에 더 잘하자"</div>
+                    </div>
+                </div>
+                
+                <div class="level-card">
+                    <div class="level-number" style="background-color: #5352ed;">400</div>
+                    <div class="level-content">
+                        <div class="level-title">이성</div>
+                        <div class="level-desc">감정을 배제한 분석적 접근. 논리적 탐구와 효율적 해결책 모색</div>
+                        <div class="level-quote">"왜 이런 결정이 내려졌을까? 개선할 부분은 무엇일까?"</div>
+                    </div>
+                </div>
+                
+                <div class="level-card">
+                    <div class="level-number" style="background-color: #3742fa;">500</div>
+                    <div class="level-content">
+                        <div class="level-title">사랑</div>
+                        <div class="level-desc">상황을 초월한 이해. 모든 이에게 연민과 이해를 보냄</div>
+                        <div class="level-quote">"이 경험이 모두에게 더 큰 선을 가져올 수 있음을 이해한다"</div>
+                    </div>
+                </div>
+                
+                <div class="level-card">
+                    <div class="level-number" style="background-color: #1e90ff;">600</div>
+                    <div class="level-content">
+                        <div class="level-title">평화</div>
+                        <div class="level-desc">내면의 고요함과 평화. 외부 상황에 영향받지 않음</div>
+                        <div class="level-quote">"상황은 더 이상 '문제'가 아니라 존재의 완벽함을 드러내는 한 부분"</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="notes">
+            <p><strong>같은 프로젝트 취소 상황에서의 의식수준별 경험:</strong></p>
+            <p><strong>낮은 의식수준 (200 미만)</strong>: 파멸적 절망, 분노, 오만함. 외부 상황에 휘둘림</p>
+            <p><strong>높은 의식수준 (200 이상)</strong>: 성장 기회 포착, 내면 평화 유지, 초월적 이해 도달</p>
+            <p><strong>핵심 통찰:</strong> 우리의 경험은 외부 상황에 의해 결정되는 것이 아니라, 그 상황을 인지하는 우리 자신의 의식수준에 의해 창조된다.</p>
+        </div>
+        
+        <div class="bottom-message">
+            "의식수준은 고정된 것이 아닙니다. 자기 성찰과 영적 탐구를 통해 누구나 의식수준을 높여갈 수 있습니다.<br>
+            의식수준을 높이는 것만이 진정한 평화와 권능 속에서 삶을 창조하는 가장 강력한 방법입니다."
+        </div>
+    </div>
+</body>
+</html>
