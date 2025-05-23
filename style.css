@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Inter:wght@400;600&display=swap');
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #F4F7F6; /* light cool grey */
+    color: #212529; /* dark text */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+.infographic-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px 25px; /* 1. Global & Container: More horizontal space */
+}
+
+/* 2. Header & Main Title: Added header styling */
+header {
+    display: block;
+    margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+    font-family: 'Nunito', Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 2.8em;
+    text-align: center;
+    color: #2c3e50; /* muted blue */
+    margin-bottom: 40px; /* 2. Header & Main Title: Increased margin */
+    font-weight: 700; /* 2. Header & Main Title: Nunito bold */
+}
+
+h2 {
+    font-size: 2em;
+    color: #34495e; /* darker, serious blue */
+    border-bottom: 4px solid #FF7F50; /* 3. Section Titles: Stronger accent line */
+    padding-bottom: 10px;
+    margin-top: 50px; /* 3. Section Titles: Consistent margin-top */
+    margin-bottom: 25px;
+}
+
+.card {
+    background-color: #FFFFFF; /* white */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Slightly softer shadow */
+    padding: 30px; /* 4. Card Styling: Increased padding */
+    margin-bottom: 25px;
+    border: 1px solid #E8E8E8; /* 4. Card Styling: Subtle border */
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.card p { /* 4. Card Styling: Paragraph styling */
+    font-size: 1.05em;
+    line-height: 1.7;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 700; /* 5. Card Titles: Nunito bold */
+}
+
+.ancient-strategists-section .card h3 {
+    color: #87CEEB; /* Sky Blue */
+}
+
+.medieval-strategists-section .card h3 {
+    color: #98FB98; /* Mint Green */
+}
+
+.modern-strategists-section .card h3 {
+    color: #FFBF00; /* Amber/Gold */
+}
+
+.intro-section.card,
+.conclusion-section.card {
+    background-color: #E6F7FF; /* Light blue tint for intro/conclusion cards */
+}
+
+.intro-section.card h2,
+.conclusion-section.card h2 {
+    border-bottom: none; /* Remove border for h2 inside these specific cards */
+    color: #333; /* Maintain a darker color for readability */
+    margin-top: 0; /* Adjust margin as it's inside a card */
+    font-size: 1.7em; /* 6. Intro/Conclusion Cards: Font size */
+    margin-bottom: 15px; /* 6. Intro/Conclusion Cards: Margin bottom */
+}
+
+.intro-section.card p,
+.conclusion-section.card p {
+    font-size: 1.1em; /* 6. Intro/Conclusion Cards: Paragraph font size */
+    color: #334155; /* 6. Intro/Conclusion Cards: Richer dark blue/grey */
+    /* line-height will be inherited from general .card p or can be specified if different */
+}
+
+.visual-placeholder {
+    width: 100%;
+    height: 60px;
+    background-color: #F0F2F5; /* 8. Visual Placeholders: New background color */
+    margin-top: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    color: #8492A6; /* 8. Visual Placeholders: Softer grey-blue text */
+    font-style: italic;
+}
+
+.quote-section {
+    text-align: center;
+    /* font-style: italic; -- Removed as individual elements are styled */
+    color: #555;
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #FFFFFF; /* White background for quote section */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.quote-section p:first-child {
+    font-family: 'Nunito', sans-serif; /* 7. Quote Section: Font family */
+    font-weight: 700; /* 7. Quote Section: Font weight */
+    font-size: 1.5em; /* 7. Quote Section: Font size */
+    color: #2c3e50; /* 7. Quote Section: Color */
+    margin-bottom: 5px;
+    font-style: normal;
+}
+
+.quote-section em {
+    font-size: 1.1em; /* 7. Quote Section: Attribution font size */
+    color: #555; /* 7. Quote Section: Attribution color */
+    font-style: italic; /* Ensure em remains italic if desired */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .infographic-container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .card h3 {
+        font-size: 1.3em;
+    }
+
+    .visual-placeholder {
+        height: 50px;
+        font-size: 0.8em;
+    }
+
+    .quote-section p:first-child {
+        font-size: 1.2em;
+    }
+
+    .quote-section em {
+        font-size: 1em;
+    }
+}
